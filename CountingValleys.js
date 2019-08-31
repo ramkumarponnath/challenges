@@ -23,3 +23,19 @@ function countingValleys(n, s) {
     return valley;
 
 }
+
+function countingValleys_2(n, s) {
+    let valley = 0;
+    let steps = 0;
+    for (let i = 0; i < n; i++) {
+        if(s[i] === 'U') {
+            steps++;
+        } else {
+            steps--;
+        }
+        if(steps === 0 && s[i] === 'U') {
+            valley++;
+        }
+    }
+    return valley;
+}
